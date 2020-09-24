@@ -11,14 +11,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         // Example of a call to a native method
-        run(0, arrayOf())
+        run(arrayOf())
     }
 
     /**
      * A native method that is implemented by the 'native-lib' native library,
      * which is packaged with this application.
      */
-    private external fun run(cmdLen: Int, cmd: Array<String>): Int
+    private external fun run(cmd: Array<String>): Int
 
     companion object {
         // Used to load the 'native-lib' library on application startup.
