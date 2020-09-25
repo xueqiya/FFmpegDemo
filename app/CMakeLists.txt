@@ -9,6 +9,9 @@ set(CPP_DIR ${CMAKE_SOURCE_DIR}/src/main/cpp)
 # 设置jniLibs目录路径
 set(LIBS_DIR ${CMAKE_SOURCE_DIR}/src/main/jniLibs/armeabi-v7a)
 
+include_directories(libs/include
+        ${CMAKE_SOURCE_DIR}/../ffmpeg)
+
 # 添加库
 add_library(
         native_lib

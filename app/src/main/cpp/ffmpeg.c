@@ -4891,8 +4891,8 @@ int run(int argc, char **argv)
     }
 
     current_time = ti = get_benchmark_time_stamps();
-    if (transcode() < 0)
-        //exit_program(1);
+    //if (transcode() < 0)
+    //exit_program(1);
     if (do_benchmark) {
         int64_t utime, stime, rtime;
         current_time = get_benchmark_time_stamps();
@@ -4920,4 +4920,26 @@ int run(int argc, char **argv)
     output_files = NULL;
     nb_output_files = 0;
     return main_return_code;
+}
+
+HWDevice *hw_device_get_by_name(const char *name) {
+}
+
+int hw_device_init_from_string(const char *arg, HWDevice **dev) {
+    return 0;
+}
+
+void hw_device_free_all(void) {
+}
+
+int hw_device_setup_for_decode(InputStream *ist) {
+    return 0;
+}
+
+int hw_device_setup_for_encode(OutputStream *ost) {
+    return 0;
+}
+
+int hwaccel_decode_init(AVCodecContext *avctx) {
+    return 0;
 }

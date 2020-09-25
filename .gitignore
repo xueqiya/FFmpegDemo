@@ -61,3 +61,5 @@ keystore-*.properties
 
 # for gradle script of hot update
 Hello.java
+
+.cxx/
