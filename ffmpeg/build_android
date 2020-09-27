@@ -1,0 +1,45 @@
+--prefix=$PREFIX 输出路径
+--disable-static 禁止构建静态库默认关闭
+--disable-doc 禁止编译文档，可以避免将文档编译入包中。
+--disable-ffmpeg 禁止编译ffmpeg工具。
+--disable-ffplay 禁止编译ffplay工具。
+--disable-ffprobe 禁止编译ffprobe工具。
+--disable-ffserver 禁止编译ffserver工具。
+--disable-symver
+--disable-runtime-cpudetect 禁止运行时检测CPU性能，可以编出较小的包。
+--disable-htmlpages 禁止编译html文档，可以避免将文档编译入包中。
+--disable-manpages 禁止编译man文档，可以避免将文档编译入包中。
+--disable-podpages 禁止编译pod文档，可以避免将文档编译入包中
+--disable-txtpages 禁止编译txt文档，可以避免将文档编译入包中。
+--disable-avdevice 该模块主要负责与硬件设备的交互，若无需该模块，可使用--disable-avdevice禁止编译。
+--disable-swscale 该模块主要负责对原始视频数据进行场景转换、色彩映射以及格式转换，若无需该模块，可使用--disable-swscale禁止编译。
+--disable-postproc 该模块主要负责对音视频进行后期处理，若无需该模块，可使用--disable-postproc禁止编译。
+--disable-avfilter 该模块主要负责音视频的过滤，包括裁剪、位置、水印等，若无需该模块，可使用--disable-avfilter禁止编译。
+–-disable-demuxers 禁止所有分离器的编译。
+--enable-shared 构建共享库（默认关闭）
+--enable-jni 启用JNI支持
+--enable-gpl 允许使用GPL（默认关闭）
+--enable-neon NEON优化
+--enable-hwaccels 硬件加速
+--enable-avdevice libavdevice构造
+--enable-postproc libpostproc构造
+--enable-mediacodec 启用安卓MediaCodec支持
+--enable-decoder=h264_mediacodec 启用指定的解码器
+--enable-nonfree 允许使用非免费程序
+--enable-cross-compile 假定使用交叉编译
+--enable-openssl 支持https
+–-enable-small 使用编译速度来换取编译包大小。
+--cross-prefix=$CROSS_PREFIX 交叉编译工具
+--target-os=android
+--arch=$ARCH
+--cpu=$CPU
+--cc=$CC
+--cxx=$CXX
+--nm=$NM
+--strip=$STRIP
+--sysroot=$SYSROOT
+--extra-cflags="-Os -fpic $OPTIMIZE_CFLAGS"
+--extra-ldflags="$ADDI_LDFLAGS"
+$ADDITIONAL_CONFIGURE_FLAG
+
+./configure --disable-x86asm

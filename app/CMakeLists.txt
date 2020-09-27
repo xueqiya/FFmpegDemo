@@ -2,19 +2,25 @@ cmake_minimum_required(VERSION 3.4.1)
 
 find_library(log-lib
         log)
+message(当前abi:${ANDROID_ABI})
 
-# 设置cpp目录路径
 set(CPP_DIR ${CMAKE_SOURCE_DIR}/src/main/cpp)
 
-# 设置jniLibs目录路径
-set(LIBS_DIR ${CMAKE_SOURCE_DIR}/src/main/jniLibs/armeabi-v7a)
+# armeabi-v7a
+if(${ANDROID_ABI} STREQUAL "armeabi-v7a")
+    set(LIBS_DIR ${CMAKE_SOURCE_DIR}/src/main/jniLibs/armeabi-v7a)
+endif(${ANDROID_ABI} STREQUAL "armeabi-v7a")
 
-include_directories(libs/include
-        ${CMAKE_SOURCE_DIR}/../ffmpeg)
+# arm64-v8a
+if(${ANDROID_ABI} STREQUAL "arm64-v8a")
+    set(LIBS_DIR ${CMAKE_SOURCE_DIR}/src/main/jniLibs/arm64-v8a)
+endif(${ANDROID_ABI} STREQUAL "arm64-v8a")
+
+include_directories(${CMAKE_SOURCE_DIR}/../ffmpeg)
 
 # 添加库
 add_library(
-        native_lib
+        ffmepg_native
 
         SHARED
 
@@ -22,7 +28,7 @@ add_library(
         ${CPP_DIR}/ffmpeg.c
         ${CPP_DIR}/ffmpeg_filter.c
         ${CPP_DIR}/ffmpeg_opt.c
-        ${CPP_DIR}/native_lib.c)
+        ${CPP_DIR}/ffmepg_native.c)
 
 add_library(avcodec
         SHARED
@@ -80,7 +86,7 @@ set_target_properties(swscale
         PROPERTIES IMPORTED_LOCATION
         ${LIBS_DIR}/libswscale.so)
 
-target_link_libraries(native_lib
+target_link_libraries(ffmepg_native
         avcodec
         avdevice
         avfilter
