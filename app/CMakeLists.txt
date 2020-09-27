@@ -16,6 +16,9 @@ if(${ANDROID_ABI} STREQUAL "arm64-v8a")
     set(LIBS_DIR ${CMAKE_SOURCE_DIR}/src/main/jniLibs/arm64-v8a)
 endif(${ANDROID_ABI} STREQUAL "arm64-v8a")
 
+include_directories(${CMAKE_SOURCE_DIR}/src/main/cpp)
+include_directories(${CMAKE_SOURCE_DIR}/src/main/cpp/ffmpeg)
+include_directories(${CMAKE_SOURCE_DIR}/src/main/cpp/include)
 include_directories(${CMAKE_SOURCE_DIR}/../ffmpeg)
 
 # 添加库
@@ -28,6 +31,7 @@ add_library(
         ${CPP_DIR}/ffmepg/ffmpeg.c
         ${CPP_DIR}/ffmepg/ffmpeg_filter.c
         ${CPP_DIR}/ffmepg/ffmpeg_opt.c
+        ${CPP_DIR}/ffmpeg_thread.c
         ${CPP_DIR}/ffmepg_native.c)
 
 add_library(avcodec

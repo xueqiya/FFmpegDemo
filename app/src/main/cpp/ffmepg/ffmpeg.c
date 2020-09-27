@@ -107,6 +107,7 @@
 #include "libavutil/avassert.h"
 
 #include "../android_log.h"
+#include "../ffmepg_native.h"
 
 const char program_name[] = "ffmpeg";
 const int program_birth_year = 2000;
@@ -1660,6 +1661,7 @@ static void print_report(int is_last_report, int64_t timer_start, int64_t cur_ti
     const char *hours_sign;
     int ret;
     float t;
+    float mss;
 
     if (!print_stats && !is_last_report && !progress_avio)
         return;
@@ -1761,6 +1763,7 @@ static void print_report(int is_last_report, int64_t timer_start, int64_t cur_ti
 
     secs = FFABS(pts) / AV_TIME_BASE;
     us = FFABS(pts) % AV_TIME_BASE;
+    mss = secs + ((float) us / AV_TIME_BASE);
     mins = secs / 60;
     secs %= 60;
     hours = mins / 60;
@@ -1778,6 +1781,7 @@ static void print_report(int is_last_report, int64_t timer_start, int64_t cur_ti
         av_bprintf(&buf, "%s%02d:%02d:%02d.%02d ",
                    hours_sign, hours, mins, secs, (100 * us) / AV_TIME_BASE);
     }
+    ffmpeg_progress(mss);
 
     if (bitrate < 0) {
         av_bprintf(&buf, "bitrate=N/A");
