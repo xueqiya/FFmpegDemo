@@ -2,8 +2,13 @@ package com.apkmatrix.demo.ffmpeg
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.apkmatrix.components.ffmpeg_android.jni.FFmpegCmd
+import com.apkmatrix.demo.ffmpeg.utils.FileUtils
+import com.apkmatrix.demo.ffmpeg.utils.LogUtils
+import com.apkmatrix.demo.ffmpeg.utils.OpenFileUtil
 import kotlinx.android.synthetic.main.activity_main.*
 import java.io.File
+import kotlin.concurrent.thread
 
 class MainActivity : AppCompatActivity() {
 
@@ -23,14 +28,9 @@ class MainActivity : AppCompatActivity() {
             val cmd = "ffmpeg -y -i $path1 $path2"
             //val cmd = "ffmpeg -y -i $path1/0.mp4 $path2/1.mp4"
             //val cmd = "ffmpeg -i $path1/0.mp4"
-            object : Thread() {
-                override fun run() {
-                    super.run()
-                    // 执行指令
-                    LogUtils.d("执行命令$cmd")
-                    cmdRun(cmd)
-                }
-            }.start()
+            thread {
+                cmdRun(cmd)
+            }
         }
 
         open.setOnClickListener {

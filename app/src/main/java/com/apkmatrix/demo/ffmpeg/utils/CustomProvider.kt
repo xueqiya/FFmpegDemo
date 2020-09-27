@@ -1,4 +1,4 @@
-package com.apkmatrix.demo.ffmpeg
+package com.apkmatrix.demo.ffmpeg.utils
 
 import androidx.core.content.FileProvider
 

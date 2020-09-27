@@ -65,7 +65,7 @@ void ffmpeg_progress(float progress) {
 }
 
 JNIEXPORT jint JNICALL
-Java_com_apkmatrix_demo_ffmpeg_FFmpegCmd_run(JNIEnv *env, jclass clazz, jint cmdnum,
+Java_com_apkmatrix_components_ffmpeg_1android_jni_FFmpegCmd_run(JNIEnv *env, jclass clazz, jint cmdnum,
                                               jobjectArray cmdline) {
     (*env)->GetJavaVM(env, &jvm);
     m_clazz = (*env)->NewGlobalRef(env, clazz);
@@ -97,6 +97,6 @@ Java_com_apkmatrix_demo_ffmpeg_FFmpegCmd_run(JNIEnv *env, jclass clazz, jint cmd
 }
 
 JNIEXPORT void JNICALL
-Java_com_apkmatrix_demo_ffmpeg_FFmpegCmd_exit(JNIEnv *env, jclass type) {
+Java_com_apkmatrix_components_ffmpeg_1android_jni_FFmpegCmd_exit(JNIEnv *env, jclass type) {
 
 }

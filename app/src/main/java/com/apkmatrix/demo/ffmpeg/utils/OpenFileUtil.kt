@@ -1,4 +1,4 @@
-package com.apkmatrix.demo.ffmpeg
+package com.apkmatrix.demo.ffmpeg.utils
 
 import android.content.Context
 import android.content.Intent
@@ -128,7 +128,8 @@ class OpenFileUtil private constructor() {
             get() {
                 synchronized(OpenFileUtil::class.java) {
                     if (field == null) {
-                        field = OpenFileUtil()
+                        field =
+                            OpenFileUtil()
                     }
                 }
                 return field

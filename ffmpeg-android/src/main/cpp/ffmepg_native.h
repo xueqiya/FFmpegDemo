@@ -8,9 +8,9 @@
 extern "C" {
 #endif
 
-JNIEXPORT jint JNICALL Java_com_apkmatrix_demo_ffmpeg_FFmpegCmd1_run(JNIEnv *, jclass, jint, jobjectArray);
+JNIEXPORT jint JNICALL Java_com_apkmatrix_components_ffmpeg_1android_jni_FFmpegCmd_run(JNIEnv *, jclass, jint, jobjectArray);
 
-JNIEXPORT void JNICALL Java_com_apkmatrix_demo_ffmpeg_FFmpegCmd_exit(JNIEnv *, jclass);
+JNIEXPORT void JNICALL Java_com_apkmatrix_components_ffmpeg_1android_jni_FFmpegCmd_exit(JNIEnv *, jclass);
 
 #ifdef __cplusplus
 }

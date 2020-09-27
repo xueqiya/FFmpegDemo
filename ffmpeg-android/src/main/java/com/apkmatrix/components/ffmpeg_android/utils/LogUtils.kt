@@ -1,4 +1,4 @@
-package com.apkmatrix.demo.ffmpeg
+package com.apkmatrix.components.ffmpeg_android.utils
 
 import android.util.Log
 

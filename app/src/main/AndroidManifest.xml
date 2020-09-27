@@ -22,7 +22,7 @@
         </activity>
 
         <provider
-            android:name=".CustomProvider"
+            android:name=".utils.CustomProvider"
             android:authorities="${applicationId}.provider"
             android:exported="false"
             android:grantUriPermissions="true">

@@ -1,4 +1,4 @@
-package com.apkmatrix.demo.ffmpeg;
+package com.apkmatrix.demo.ffmpeg.utils;
 
 import android.content.Context;
 import android.util.Log;
@@ -7,7 +7,6 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.RandomAccessFile;
 
 public class FileUtils {
 
