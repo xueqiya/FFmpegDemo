@@ -24,10 +24,10 @@ add_library(
 
         SHARED
 
-        ${CPP_DIR}/cmdutils.c
-        ${CPP_DIR}/ffmpeg.c
-        ${CPP_DIR}/ffmpeg_filter.c
-        ${CPP_DIR}/ffmpeg_opt.c
+        ${CPP_DIR}/ffmepg/cmdutils.c
+        ${CPP_DIR}/ffmepg/ffmpeg.c
+        ${CPP_DIR}/ffmepg/ffmpeg_filter.c
+        ${CPP_DIR}/ffmepg/ffmpeg_opt.c
         ${CPP_DIR}/ffmepg_native.c)
 
 add_library(avcodec

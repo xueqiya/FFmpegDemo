@@ -1,5 +1,5 @@
 #include <jni.h>
-#include "ffmpeg.h"
+#include "ffmepg/ffmpeg.h"
 
 JNIEXPORT jint
 

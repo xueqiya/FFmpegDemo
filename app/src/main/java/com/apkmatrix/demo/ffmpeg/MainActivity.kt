@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         val path1 = "${separator}storage${separator}emulated${separator}0"
         val path2 = "${getExternalFilesDir(null)?.absolutePath}"
         start.setOnClickListener {
-            val cmd = "ffmpeg -y -i $path1/0.mp4 $path2/video_100.gif"
+            val cmd = "ffmpeg -y -t 3 -ss 00:00:02 -i $path1/0.mp4 $path2/small-clip.gif"
             //val cmd = "ffmpeg -y -i $path1/0.mp4 $path2/1.mp4"
             //val cmd = "ffmpeg -i $path1/0.mp4"
             object : Thread() {
