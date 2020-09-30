@@ -1,0 +1,150 @@
+libSYS/src/genericStds.lo: libSYS/src/genericStds.cpp \
+  libSYS/include/genericStds.h libSYS/include/machine_type.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/c++/v1/stddef.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/c++/v1/__config \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/features.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/sys/cdefs.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/android/versioning.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/android/api-level.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/bits/get_device_api_level_inlines.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/pthread.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/8.0.7/include/stddef.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/8.0.7/include/__stddef_max_align_t.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/c++/v1/__nullptr \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/c++/v1/stdlib.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/local/include/stdlib.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/stdlib.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/alloca.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/bits/wait.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/linux/wait.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/malloc.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/c++/v1/stdio.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/stdio.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/sys/types.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/c++/v1/stdint.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/8.0.7/include/stdint.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/stdint.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/bits/wchar_limits.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/linux/types.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/aarch64-linux-android/asm/types.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/asm-generic/types.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/asm-generic/int-ll64.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/aarch64-linux-android/asm/bitsperlong.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/asm-generic/bitsperlong.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/linux/posix_types.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/linux/stddef.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/linux/compiler_types.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/linux/compiler.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/aarch64-linux-android/asm/posix_types.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/asm-generic/posix_types.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/bits/pthread_types.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/8.0.7/include/stdarg.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/bits/seek_constants.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/bits/struct_file.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/xlocale.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/android/legacy_stdlib_inlines.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/c++/v1/string.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/string.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/bits/strcasecmp.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/strings.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/android/legacy_strings_inlines.h
+
+libSYS/include/genericStds.h:
+
+libSYS/include/machine_type.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/c++/v1/stddef.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/c++/v1/__config:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/features.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/sys/cdefs.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/android/versioning.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/android/api-level.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/bits/get_device_api_level_inlines.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/pthread.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/8.0.7/include/stddef.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/8.0.7/include/__stddef_max_align_t.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/c++/v1/__nullptr:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/c++/v1/stdlib.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/local/include/stdlib.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/stdlib.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/alloca.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/bits/wait.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/linux/wait.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/malloc.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/c++/v1/stdio.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/stdio.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/sys/types.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/c++/v1/stdint.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/8.0.7/include/stdint.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/stdint.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/bits/wchar_limits.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/linux/types.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/aarch64-linux-android/asm/types.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/asm-generic/types.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/asm-generic/int-ll64.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/aarch64-linux-android/asm/bitsperlong.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/asm-generic/bitsperlong.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/linux/posix_types.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/linux/stddef.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/linux/compiler_types.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/linux/compiler.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/aarch64-linux-android/asm/posix_types.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/asm-generic/posix_types.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/bits/pthread_types.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/8.0.7/include/stdarg.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/bits/seek_constants.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/bits/struct_file.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/xlocale.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/android/legacy_stdlib_inlines.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/c++/v1/string.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/string.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/bits/strcasecmp.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/strings.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/android/legacy_strings_inlines.h:

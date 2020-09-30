@@ -12,5 +12,7 @@ libavformat/id3v2.o: libavformat/id3v2.c config.h libavutil/avstring.h \
   libavformat/version.h libavformat/url.h libavformat/internal.h \
   libavformat/avformat.h libavcodec/avcodec.h libavutil/samplefmt.h \
   libavutil/buffer.h libavutil/channel_layout.h libavutil/frame.h \
-  libavutil/hwcontext.h libavcodec/version.h libavformat/os_support.h \
+  libavutil/hwcontext.h libavcodec/bsf.h libavcodec/codec_id.h \
+  libavcodec/codec_par.h libavcodec/packet.h libavcodec/version.h \
+  libavcodec/codec.h libavcodec/codec_desc.h libavformat/os_support.h \
   libavformat/id3v1.h libavformat/id3v2.h libavformat/metadata.h

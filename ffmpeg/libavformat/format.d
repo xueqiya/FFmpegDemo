@@ -10,5 +10,7 @@ libavformat/format.o: libavformat/format.c libavutil/avstring.h \
   libavformat/avio_internal.h libavformat/avio.h libavformat/version.h \
   libavformat/url.h libavformat/avformat.h libavcodec/avcodec.h \
   libavutil/buffer.h libavutil/channel_layout.h libavutil/frame.h \
-  libavutil/hwcontext.h libavcodec/version.h libavformat/id3v2.h \
+  libavutil/hwcontext.h libavcodec/bsf.h libavcodec/codec_id.h \
+  libavcodec/codec_par.h libavcodec/packet.h libavcodec/version.h \
+  libavcodec/codec.h libavcodec/codec_desc.h libavformat/id3v2.h \
   libavformat/internal.h libavformat/os_support.h libavformat/metadata.h

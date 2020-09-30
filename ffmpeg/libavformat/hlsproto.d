@@ -9,6 +9,8 @@ libavformat/hlsproto.o: libavformat/hlsproto.c libavutil/avstring.h \
   libavutil/pixfmt.h libavutil/libm.h libavutil/intfloat.h \
   libavutil/mathematics.h libavutil/rational.h libavutil/buffer.h \
   libavutil/channel_layout.h libavutil/frame.h libavutil/hwcontext.h \
-  libavcodec/version.h libavformat/avio.h libavformat/version.h \
+  libavcodec/bsf.h libavcodec/codec_id.h libavcodec/codec_par.h \
+  libavcodec/packet.h libavcodec/version.h libavcodec/codec.h \
+  libavcodec/codec_desc.h libavformat/avio.h libavformat/version.h \
   libavformat/avio_internal.h libavformat/url.h libavformat/internal.h \
   libavutil/bprint.h libavformat/os_support.h

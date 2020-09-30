@@ -9,8 +9,10 @@ libavformat/dump.o: libavformat/dump.c libavutil/channel_layout.h \
   libavutil/libm.h libavutil/intreadwrite.h libavutil/bswap.h \
   libavutil/arm/bswap.h libavutil/arm/intreadwrite.h \
   libavutil/mastering_display_metadata.h libavutil/frame.h \
-  libavutil/buffer.h libavutil/samplefmt.h libavutil/opt.h \
-  libavutil/avstring.h libavutil/replaygain.h libavutil/spherical.h \
-  libavutil/stereo3d.h libavformat/avformat.h libavcodec/avcodec.h \
-  libavutil/hwcontext.h libavcodec/version.h libavformat/avio.h \
-  libavformat/version.h
+  libavutil/buffer.h libavutil/samplefmt.h libavutil/dovi_meta.h \
+  libavutil/opt.h libavutil/avstring.h libavutil/replaygain.h \
+  libavutil/spherical.h libavutil/stereo3d.h libavformat/avformat.h \
+  libavcodec/avcodec.h libavutil/hwcontext.h libavcodec/bsf.h \
+  libavcodec/codec_id.h libavcodec/codec_par.h libavcodec/packet.h \
+  libavcodec/version.h libavcodec/codec.h libavcodec/codec_desc.h \
+  libavformat/avio.h libavformat/version.h

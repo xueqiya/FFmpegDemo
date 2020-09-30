@@ -7,14 +7,16 @@ message(当前abi:${ANDROID_ABI})
 set(CPP_DIR ${CMAKE_SOURCE_DIR}/src/main/cpp)
 
 # armeabi-v7a
-if(${ANDROID_ABI} STREQUAL "armeabi-v7a")
+if (${ANDROID_ABI} STREQUAL "armeabi-v7a")
     set(LIBS_DIR ${CMAKE_SOURCE_DIR}/src/main/jniLibs/armeabi-v7a)
-endif(${ANDROID_ABI} STREQUAL "armeabi-v7a")
+    set(FDK_AAC_DIR ${CMAKE_SOURCE_DIR}/../ffmpeg/fdk-aac/android/armv7-a)
+    set(OPENSSL_DIR ${CMAKE_SOURCE_DIR}/../ffmpeg/openssl/android/armv7-a)
+endif (${ANDROID_ABI} STREQUAL "armeabi-v7a")
 
-# arm64-v8a
-if(${ANDROID_ABI} STREQUAL "arm64-v8a")
-    set(LIBS_DIR ${CMAKE_SOURCE_DIR}/src/main/jniLibs/arm64-v8a)
-endif(${ANDROID_ABI} STREQUAL "arm64-v8a")
+## arm64-v8a
+#if(${ANDROID_ABI} STREQUAL "arm64-v8a")
+#    set(LIBS_DIR ${CMAKE_SOURCE_DIR}/src/main/jniLibs/arm64-v8a)
+#endif(${ANDROID_ABI} STREQUAL "arm64-v8a")
 
 include_directories(${CMAKE_SOURCE_DIR}/src/main/cpp)
 include_directories(${CMAKE_SOURCE_DIR}/src/main/cpp/ffmpeg)
@@ -41,12 +43,12 @@ set_target_properties(avcodec
         PROPERTIES IMPORTED_LOCATION
         ${LIBS_DIR}/libavcodec.so)
 
-add_library(avdevice
-        SHARED
-        IMPORTED)
-set_target_properties(avdevice
-        PROPERTIES IMPORTED_LOCATION
-        ${LIBS_DIR}/libavdevice.so)
+#add_library(avdevice
+#        SHARED
+#        IMPORTED)
+#set_target_properties(avdevice
+#        PROPERTIES IMPORTED_LOCATION
+#        ${LIBS_DIR}/libavdevice.so)
 
 add_library(avfilter
         SHARED
@@ -76,12 +78,12 @@ set_target_properties(postproc
         PROPERTIES IMPORTED_LOCATION
         ${LIBS_DIR}/libpostproc.so)
 
-add_library(swresample
-        SHARED
-        IMPORTED)
-set_target_properties(swresample
-        PROPERTIES IMPORTED_LOCATION
-        ${LIBS_DIR}/libswresample.so)
+#add_library(swresample
+#        SHARED
+#        IMPORTED)
+#set_target_properties(swresample
+#        PROPERTIES IMPORTED_LOCATION
+#        ${LIBS_DIR}/libswresample.so)
 
 add_library(swscale
         SHARED
@@ -90,13 +92,35 @@ set_target_properties(swscale
         PROPERTIES IMPORTED_LOCATION
         ${LIBS_DIR}/libswscale.so)
 
+add_library(fdk-aac
+        SHARED
+        IMPORTED)
+set_target_properties(fdk-aac
+        PROPERTIES IMPORTED_LOCATION
+        ${FDK_AAC_DIR}/lib/libfdk-aac.so)
+
+add_library(crypto
+        SHARED
+        IMPORTED)
+set_target_properties(crypto
+        PROPERTIES IMPORTED_LOCATION
+        ${OPENSSL_DIR}/lib/libcrypto.1.1.so)
+
+add_library(ssl
+        SHARED
+        IMPORTED)
+set_target_properties(ssl
+        PROPERTIES IMPORTED_LOCATION
+        ${OPENSSL_DIR}/lib/libssl.1.1.so)
+
 target_link_libraries(ffmepg_native
         avcodec
-        avdevice
         avfilter
         avformat
         avutil
         postproc
-        swresample
         swscale
+        fdk-aac
+        crypto
+        ssl
         ${log-lib})

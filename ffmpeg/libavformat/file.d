@@ -8,5 +8,7 @@ libavformat/file.o: libavformat/file.c libavutil/avstring.h \
   libavutil/cpu.h libavutil/dict.h libavutil/libm.h libavutil/opt.h \
   libavutil/samplefmt.h libavformat/avformat.h libavcodec/avcodec.h \
   libavutil/buffer.h libavutil/channel_layout.h libavutil/frame.h \
-  libavutil/hwcontext.h libavcodec/version.h libavformat/avio.h \
+  libavutil/hwcontext.h libavcodec/bsf.h libavcodec/codec_id.h \
+  libavcodec/codec_par.h libavcodec/packet.h libavcodec/version.h \
+  libavcodec/codec.h libavcodec/codec_desc.h libavformat/avio.h \
   libavformat/version.h libavformat/os_support.h libavformat/url.h

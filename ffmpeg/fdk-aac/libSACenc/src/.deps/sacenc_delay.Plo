@@ -1,0 +1,55 @@
+libSACenc/src/sacenc_delay.lo: libSACenc/src/sacenc_delay.cpp \
+  libSACenc/src/sacenc_delay.h libSACenc/include/sacenc_lib.h \
+  libSYS/include/machine_type.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/c++/v1/stddef.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/c++/v1/__config \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/features.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/sys/cdefs.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/android/versioning.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/android/api-level.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/bits/get_device_api_level_inlines.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/pthread.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/8.0.7/include/stddef.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/8.0.7/include/__stddef_max_align_t.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/c++/v1/__nullptr \
+  libSYS/include/FDK_audio.h libSYS/include/genericStds.h \
+  libSYS/include/syslib_channelMapDescr.h \
+  libFDK/include/FDK_matrixCalloc.h libSACenc/src/sacenc_const.h
+
+libSACenc/src/sacenc_delay.h:
+
+libSACenc/include/sacenc_lib.h:
+
+libSYS/include/machine_type.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/c++/v1/stddef.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/c++/v1/__config:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/features.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/sys/cdefs.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/android/versioning.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/android/api-level.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/bits/get_device_api_level_inlines.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/pthread.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/8.0.7/include/stddef.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/8.0.7/include/__stddef_max_align_t.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/c++/v1/__nullptr:
+
+libSYS/include/FDK_audio.h:
+
+libSYS/include/genericStds.h:
+
+libSYS/include/syslib_channelMapDescr.h:
+
+libFDK/include/FDK_matrixCalloc.h:
+
+libSACenc/src/sacenc_const.h:

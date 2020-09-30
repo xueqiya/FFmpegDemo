@@ -10,5 +10,7 @@ libavformat/network.o: libavformat/network.c libavformat/network.h \
   libavformat/url.h libavformat/tls.h libavutil/opt.h \
   libavutil/samplefmt.h libavcodec/internal.h libavutil/buffer.h \
   libavutil/channel_layout.h libavcodec/avcodec.h libavutil/frame.h \
-  libavutil/hwcontext.h libavcodec/version.h libavutil/avassert.h \
+  libavutil/hwcontext.h libavcodec/bsf.h libavcodec/codec_id.h \
+  libavcodec/codec_par.h libavcodec/packet.h libavcodec/version.h \
+  libavcodec/codec.h libavcodec/codec_desc.h libavutil/avassert.h \
   libavutil/time.h

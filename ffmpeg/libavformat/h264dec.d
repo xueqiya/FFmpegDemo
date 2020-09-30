@@ -9,7 +9,9 @@ libavformat/h264dec.o: libavformat/h264dec.c libavcodec/get_bits.h \
   libavutil/intreadwrite.h libavutil/bswap.h libavutil/arm/bswap.h \
   libavutil/arm/intreadwrite.h libavutil/avassert.h libavcodec/avcodec.h \
   libavutil/samplefmt.h libavutil/buffer.h libavutil/channel_layout.h \
-  libavutil/frame.h libavutil/hwcontext.h libavcodec/version.h \
+  libavutil/frame.h libavutil/hwcontext.h libavcodec/bsf.h \
+  libavcodec/codec_id.h libavcodec/codec_par.h libavcodec/packet.h \
+  libavcodec/version.h libavcodec/codec.h libavcodec/codec_desc.h \
   libavcodec/mathops.h libavutil/reverse.h libavcodec/arm/mathops.h \
   libavcodec/vlc.h libavcodec/golomb.h libavcodec/put_bits.h \
   libavformat/avformat.h libavformat/avio.h libavformat/version.h \

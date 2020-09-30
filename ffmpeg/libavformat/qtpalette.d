@@ -8,6 +8,8 @@ libavformat/qtpalette.o: libavformat/qtpalette.c libavformat/avformat.h \
   libavutil/pixfmt.h libavutil/libm.h libavutil/intfloat.h \
   libavutil/mathematics.h libavutil/rational.h libavutil/buffer.h \
   libavutil/channel_layout.h libavutil/frame.h libavutil/hwcontext.h \
-  libavcodec/version.h libavformat/avio.h libavformat/version.h \
+  libavcodec/bsf.h libavcodec/codec_id.h libavcodec/codec_par.h \
+  libavcodec/packet.h libavcodec/version.h libavcodec/codec.h \
+  libavcodec/codec_desc.h libavformat/avio.h libavformat/version.h \
   libavutil/intreadwrite.h libavutil/bswap.h libavutil/arm/bswap.h \
   libavutil/arm/intreadwrite.h libavformat/qtpalette.h

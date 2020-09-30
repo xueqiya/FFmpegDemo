@@ -1,0 +1,42 @@
+libFDK/src/FDK_matrixCalloc.lo: libFDK/src/FDK_matrixCalloc.cpp \
+  libFDK/include/FDK_matrixCalloc.h libSYS/include/machine_type.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/c++/v1/stddef.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/c++/v1/__config \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/features.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/sys/cdefs.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/android/versioning.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/android/api-level.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/bits/get_device_api_level_inlines.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/pthread.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/8.0.7/include/stddef.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/8.0.7/include/__stddef_max_align_t.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/c++/v1/__nullptr \
+  libSYS/include/genericStds.h
+
+libFDK/include/FDK_matrixCalloc.h:
+
+libSYS/include/machine_type.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/c++/v1/stddef.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/c++/v1/__config:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/features.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/sys/cdefs.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/android/versioning.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/android/api-level.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/bits/get_device_api_level_inlines.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/pthread.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/8.0.7/include/stddef.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/8.0.7/include/__stddef_max_align_t.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/c++/v1/__nullptr:
+
+libSYS/include/genericStds.h:

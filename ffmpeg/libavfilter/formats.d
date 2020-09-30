@@ -11,5 +11,7 @@ libavfilter/formats.o: libavfilter/formats.c libavutil/avassert.h \
   libavutil/frame.h libavutil/samplefmt.h libavfilter/version.h \
   libavfilter/internal.h libavfilter/formats.h libavfilter/framepool.h \
   libavfilter/framequeue.h libavfilter/thread.h libavfilter/video.h \
-  libavcodec/avcodec.h libavutil/hwcontext.h libavcodec/version.h \
-  libavcodec/internal.h libavfilter/all_channel_layouts.inc
+  libavcodec/avcodec.h libavutil/hwcontext.h libavcodec/bsf.h \
+  libavcodec/codec_id.h libavcodec/codec_par.h libavcodec/packet.h \
+  libavcodec/version.h libavcodec/codec.h libavcodec/codec_desc.h \
+  libavcodec/internal.h

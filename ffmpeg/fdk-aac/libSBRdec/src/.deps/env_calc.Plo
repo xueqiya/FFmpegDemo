@@ -1,0 +1,134 @@
+libSBRdec/src/env_calc.lo: libSBRdec/src/env_calc.cpp \
+  libSBRdec/src/env_calc.h libSBRdec/include/sbrdecoder.h \
+  libFDK/include/common_fix.h libFDK/include/FDK_archdef.h \
+  libSYS/include/machine_type.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/c++/v1/stddef.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/c++/v1/__config \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/features.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/sys/cdefs.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/android/versioning.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/android/api-level.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/bits/get_device_api_level_inlines.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/pthread.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/8.0.7/include/stddef.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/8.0.7/include/__stddef_max_align_t.h \
+  /root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/c++/v1/__nullptr \
+  libFDK/include/fixmul.h libFDK/include/arm/fixmul_arm.h \
+  libFDK/include/abs.h libFDK/include/clz.h libFDK/include/arm/clz_arm.h \
+  libFDK/include/fixmadd.h libFDK/include/arm/fixmadd_arm.h \
+  libFDK/include/fixminmax.h libFDK/include/cplx_mul.h \
+  libFDK/include/arm/cplx_mul_arm.h libFDK/include/fixpoint_math.h \
+  libFDK/include/scale.h libSYS/include/genericStds.h \
+  libFDK/include/arm/scale_arm.h libFDK/include/FDK_bitstream.h \
+  libFDK/include/FDK_bitbuffer.h libSYS/include/FDK_audio.h \
+  libSYS/include/syslib_channelMapDescr.h \
+  libFDK/include/FDK_qmf_domain.h libFDK/include/qmf.h \
+  libFDK/include/FDK_tools_rom.h libFDK/include/dct.h \
+  libSBRdec/src/env_extr.h libSBRdec/src/lpp_tran.h libSBRdec/src/hbe.h \
+  libSBRdec/src/psdec.h libFDK/include/FDK_hybrid.h \
+  libFDK/include/FDK_decorrelate.h libSBRdec/src/pvc_dec.h \
+  libSBRdec/src/sbrdec_freq_sca.h libSBRdec/src/transcendent.h \
+  libSBRdec/src/sbr_rom.h libSBRdec/src/sbr_ram.h \
+  libSBRdec/src/sbr_dec.h libSBRdec/src/sbrdec_drc.h
+
+libSBRdec/src/env_calc.h:
+
+libSBRdec/include/sbrdecoder.h:
+
+libFDK/include/common_fix.h:
+
+libFDK/include/FDK_archdef.h:
+
+libSYS/include/machine_type.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/c++/v1/stddef.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/c++/v1/__config:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/features.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/sys/cdefs.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/android/versioning.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/android/api-level.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/bits/get_device_api_level_inlines.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/pthread.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/8.0.7/include/stddef.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/8.0.7/include/__stddef_max_align_t.h:
+
+/root/androidndk20b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/include/c++/v1/__nullptr:
+
+libFDK/include/fixmul.h:
+
+libFDK/include/arm/fixmul_arm.h:
+
+libFDK/include/abs.h:
+
+libFDK/include/clz.h:
+
+libFDK/include/arm/clz_arm.h:
+
+libFDK/include/fixmadd.h:
+
+libFDK/include/arm/fixmadd_arm.h:
+
+libFDK/include/fixminmax.h:
+
+libFDK/include/cplx_mul.h:
+
+libFDK/include/arm/cplx_mul_arm.h:
+
+libFDK/include/fixpoint_math.h:
+
+libFDK/include/scale.h:
+
+libSYS/include/genericStds.h:
+
+libFDK/include/arm/scale_arm.h:
+
+libFDK/include/FDK_bitstream.h:
+
+libFDK/include/FDK_bitbuffer.h:
+
+libSYS/include/FDK_audio.h:
+
+libSYS/include/syslib_channelMapDescr.h:
+
+libFDK/include/FDK_qmf_domain.h:
+
+libFDK/include/qmf.h:
+
+libFDK/include/FDK_tools_rom.h:
+
+libFDK/include/dct.h:
+
+libSBRdec/src/env_extr.h:
+
+libSBRdec/src/lpp_tran.h:
+
+libSBRdec/src/hbe.h:
+
+libSBRdec/src/psdec.h:
+
+libFDK/include/FDK_hybrid.h:
+
+libFDK/include/FDK_decorrelate.h:
+
+libSBRdec/src/pvc_dec.h:
+
+libSBRdec/src/sbrdec_freq_sca.h:
+
+libSBRdec/src/transcendent.h:
+
+libSBRdec/src/sbr_rom.h:
+
+libSBRdec/src/sbr_ram.h:
+
+libSBRdec/src/sbr_dec.h:
+
+libSBRdec/src/sbrdec_drc.h:

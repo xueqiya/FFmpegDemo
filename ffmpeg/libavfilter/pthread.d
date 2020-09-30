@@ -11,4 +11,6 @@ libavfilter/pthread.o: libavfilter/pthread.c config.h libavutil/common.h \
   libavfilter/internal.h libavfilter/formats.h libavfilter/framepool.h \
   libavfilter/framequeue.h libavfilter/thread.h libavfilter/video.h \
   libavcodec/avcodec.h libavutil/channel_layout.h libavutil/hwcontext.h \
-  libavcodec/version.h libavcodec/internal.h
+  libavcodec/bsf.h libavcodec/codec_id.h libavcodec/codec_par.h \
+  libavcodec/packet.h libavcodec/version.h libavcodec/codec.h \
+  libavcodec/codec_desc.h libavcodec/internal.h

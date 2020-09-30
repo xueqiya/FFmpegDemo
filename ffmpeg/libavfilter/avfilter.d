@@ -12,5 +12,7 @@ libavfilter/avfilter.o: libavfilter/avfilter.c libavutil/avassert.h \
   libavutil/thread.h libavfilter/framequeue.h libavfilter/audio.h \
   libavfilter/avfilter.h libavfilter/version.h libavfilter/internal.h \
   libavfilter/formats.h libavfilter/framepool.h libavfilter/thread.h \
-  libavfilter/video.h libavcodec/avcodec.h libavcodec/version.h \
+  libavfilter/video.h libavcodec/avcodec.h libavcodec/bsf.h \
+  libavcodec/codec_id.h libavcodec/codec_par.h libavcodec/packet.h \
+  libavcodec/version.h libavcodec/codec.h libavcodec/codec_desc.h \
   libavcodec/internal.h libavfilter/filters.h libavutil/ffversion.h

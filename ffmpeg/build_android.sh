@@ -10,30 +10,79 @@ function build_android
 echo "Compiling FFmpeg for $CPU"
 ./configure \
     --prefix=$PREFIX \
+    --extra-cflags="-I/$(pwd)/fdk-aac/android/${CPU}/include" \
+    --extra-ldflags="-L/$(pwd)/fdk-aac/android/${CPU}/lib" \
+    --extra-cflags="-I/$(pwd)/openssl/android/${CPU}/include" \
+    --extra-ldflags="-L/$(pwd)/openssl/android/${CPU}/lib" \
+    --extra-cflags="-Os -fpic $OPTIMIZE_CFLAGS" \
+    --extra-ldflags="$ADDI_LDFLAGS" \
     --disable-static \
-    --disable-doc \
+    --enable-shared \
+    --disable-debug \
+    --enable-cross-compile \
+    --enable-small \
+    --enable-gpl \
+    --enable-nonfree \
+    \
     --disable-ffmpeg \
     --disable-ffplay \
     --disable-ffprobe \
-    --disable-symver \
+    --disable-avdevice \
+    --disable-programs \
+    --disable-swresample \
+    --disable-doc \
     --disable-runtime-cpudetect \
     --disable-htmlpages \
     --disable-htmlpages \
     --disable-manpages \
     --disable-podpages \
     --disable-txtpages \
-    --enable-shared \
+    --enable-network \
+    --enable-openssl \
     --enable-jni \
-    --enable-gpl \
-    --enable-neon \
-    --enable-hwaccels \
-    --enable-avdevice \
-    --enable-postproc \
     --enable-mediacodec \
     --enable-decoder=h264_mediacodec \
-    --enable-nonfree \
-    --enable-cross-compile \
-    --enable-small \
+    \
+    --disable-everything \
+    \
+    --enable-protocol=file \
+    --enable-protocol=http \
+    --enable-protocol=https \
+    --enable-protocol=tcp \
+    --enable-protocol=rtmp \
+    --enable-protocol=hls \
+    \
+    --enable-muxer=avi \
+    --enable-demuxer=avi \
+    \
+    --enable-libfdk_aac \
+    --enable-encoder=libfdk_aac \
+    --enable-decoder=aac_latm \
+    --enable-decoder=aac \
+    --enable-demuxer=aac \
+    --enable-parser=aac \
+    \
+    --enable-libvpx \
+    --enable-decoder=vp8 \
+    --enable-decoder=vp8 \
+    --enable-parser=vp8 \
+    --enable-decoder=vp9 \
+    --enable-decoder=vp9 \
+    --enable-parser=vp9 \
+    \
+    --enable-decoder=mjpeg \
+    --enable-demuxer=mjpeg \
+    --enable-muxer=mjpeg \
+    --enable-parser=mjpeg \
+    \
+    --enable-decoder=png \
+    --enable-parser=png \
+    \
+    --enable-decoder=h264 \
+    --enable-demuxer=h264 \
+    --enable-muxer=h264 \
+    --enable-parser=h264 \
+    \
     --cross-prefix=$CROSS_PREFIX \
     --target-os=android \
     --arch=$ARCH \
@@ -42,13 +91,9 @@ echo "Compiling FFmpeg for $CPU"
     --cxx=$CXX \
     --nm=$NM \
     --strip=$STRIP \
-    --sysroot=$SYSROOT \
-    --extra-cflags="-Os -fpic $OPTIMIZE_CFLAGS" \
-    --extra-ldflags="$ADDI_LDFLAGS" \
-    $ADDITIONAL_CONFIGURE_FLAG
+    --sysroot=$SYSROOT
 
-make clean
-make -j32
+make -j8
 make install
 echo "The Compilation of FFmpeg for $CPU is completed"
 }

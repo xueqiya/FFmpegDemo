@@ -19,15 +19,16 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        FileUtils.copy2Memory(this, "0.mp4")
+        FileUtils.copy2Memory(this, "1")
 
-        path1 = "$externalCacheDir${separator}0.mp4"
-        path2 = "${getExternalFilesDir(null)?.absolutePath}${separator}0.gif"
+        path1 = "$externalCacheDir${separator}1"
+        path2 = "${getExternalFilesDir(null)?.absolutePath}"
 
         start.setOnClickListener {
-            val cmd = "ffmpeg -y -i $path1 $path2"
-            //val cmd = "ffmpeg -y -i $path1/0.mp4 $path2/1.mp4"
-            //val cmd = "ffmpeg -i $path1/0.mp4"
+//            val cmd = "ffmpeg -y -i $path1 -c copy $path2/0.h264"
+//            val cmd = "ffmpeg -y -i $path1 $path2/0.gif"
+//            val cmd = "ffmpeg -i $path1/0.mp4"
+            val cmd = "ffmpeg -i 'https://gamespotvideo.cbsistatic.com/vr/2020/09/11/517330/GSU_DCFandome2020_DoomPatrol_v2_8000.m3u8' $path1/0.avi"
             thread {
                 cmdRun(cmd)
             }

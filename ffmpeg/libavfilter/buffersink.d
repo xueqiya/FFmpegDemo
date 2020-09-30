@@ -11,5 +11,7 @@ libavfilter/buffersink.o: libavfilter/buffersink.c libavutil/avassert.h \
   libavfilter/audio.h libavfilter/avfilter.h libavfilter/version.h \
   libavfilter/internal.h libavfilter/formats.h libavfilter/framepool.h \
   libavfilter/thread.h libavfilter/video.h libavcodec/avcodec.h \
-  libavutil/hwcontext.h libavcodec/version.h libavcodec/internal.h \
+  libavutil/hwcontext.h libavcodec/bsf.h libavcodec/codec_id.h \
+  libavcodec/codec_par.h libavcodec/packet.h libavcodec/version.h \
+  libavcodec/codec.h libavcodec/codec_desc.h libavcodec/internal.h \
   libavfilter/buffersink.h libavfilter/filters.h
