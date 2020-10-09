@@ -37,23 +37,16 @@ echo "Compiling FFmpeg for $CPU"
     --disable-manpages \
     --disable-podpages \
     --disable-txtpages \
+    --disable-everything \
     --enable-network \
     --enable-openssl \
     --enable-jni \
     --enable-mediacodec \
     --enable-decoder=h264_mediacodec \
-    \
-    --disable-everything \
-    \
-    --enable-protocol=file \
-    --enable-protocol=http \
+    --enable-demuxers \
+    --enable-muxer=mp4 \
+    --enable-protocols \
     --enable-protocol=https \
-    --enable-protocol=tcp \
-    --enable-protocol=rtmp \
-    --enable-protocol=hls \
-    \
-    --enable-muxer=avi \
-    --enable-demuxer=avi \
     \
     --enable-libfdk_aac \
     --enable-encoder=libfdk_aac \
@@ -64,15 +57,12 @@ echo "Compiling FFmpeg for $CPU"
     \
     --enable-libvpx \
     --enable-decoder=vp8 \
-    --enable-decoder=vp8 \
     --enable-parser=vp8 \
-    --enable-decoder=vp9 \
     --enable-decoder=vp9 \
     --enable-parser=vp9 \
     \
     --enable-decoder=mjpeg \
     --enable-demuxer=mjpeg \
-    --enable-muxer=mjpeg \
     --enable-parser=mjpeg \
     \
     --enable-decoder=png \
@@ -80,7 +70,6 @@ echo "Compiling FFmpeg for $CPU"
     \
     --enable-decoder=h264 \
     --enable-demuxer=h264 \
-    --enable-muxer=h264 \
     --enable-parser=h264 \
     \
     --cross-prefix=$CROSS_PREFIX \
@@ -113,15 +102,15 @@ OPTIMIZE_CFLAGS="-mfloat-abi=softfp -mfpu=vfp -marm -march=$CPU "
 build_android
 
 #armv8-a
-API=21
-ARCH=arm64
-CPU=armv8-a
-CC=$TOOLCHAIN/bin/aarch64-linux-android$API-clang
-CXX=$TOOLCHAIN/bin/aarch64-linux-android$API-clang++
-NM=$TOOLCHAIN/bin/aarch64-linux-android-nm
-STRIP=$TOOLCHAIN/bin/aarch64-linux-android-strip
-SYSROOT=$NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot
-CROSS_PREFIX=$TOOLCHAIN/bin/aarch64-linux-androideabi-
-PREFIX=$(pwd)/android/$CPU
-OPTIMIZE_CFLAGS="-mfloat-abi=softfp -mfpu=vfp -marm -march=$CPU "
-build_android
+#API=21
+#ARCH=arm64
+#CPU=armv8-a
+#CC=$TOOLCHAIN/bin/aarch64-linux-android$API-clang
+#CXX=$TOOLCHAIN/bin/aarch64-linux-android$API-clang++
+#NM=$TOOLCHAIN/bin/aarch64-linux-android-nm
+#STRIP=$TOOLCHAIN/bin/aarch64-linux-android-strip
+#SYSROOT=$NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot
+#CROSS_PREFIX=$TOOLCHAIN/bin/aarch64-linux-androideabi-
+#PREFIX=$(pwd)/android/$CPU
+#OPTIMIZE_CFLAGS="-mfloat-abi=softfp -mfpu=vfp -marm -march=$CPU "
+#build_android

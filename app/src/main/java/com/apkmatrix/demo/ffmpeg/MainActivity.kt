@@ -20,22 +20,20 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         FileUtils.copy2Memory(this, "1")
+        FileUtils.copy2Memory(this, "2")
 
-        path1 = "$externalCacheDir${separator}1"
+        path1 = "$externalCacheDir${separator}2"
         path2 = "${getExternalFilesDir(null)?.absolutePath}"
 
         start.setOnClickListener {
-//            val cmd = "ffmpeg -y -i $path1 -c copy $path2/0.h264"
-//            val cmd = "ffmpeg -y -i $path1 $path2/0.gif"
-//            val cmd = "ffmpeg -i $path1/0.mp4"
-            val cmd = "ffmpeg -i 'https://gamespotvideo.cbsistatic.com/vr/2020/09/11/517330/GSU_DCFandome2020_DoomPatrol_v2_8000.m3u8' $path1/0.avi"
-            thread {
-                cmdRun(cmd)
-            }
+            val cmd = "ffmpeg -y -i $path1 -vcodec copy -acodec copy $path2/0.mp4"
+//            val cmd = "ffmpeg -y -i $path1 -vcodec copy -acodec copy $path2/0.mp4"
+//            val cmd = "ffmpeg -y -protocol_whitelist file,http,https,tcp,tls,crypto -i https://gamespotvideo.cbsistatic.com/vr/2020/09/11/517330/GSU_DCFandome2020_DoomPatrol_v2_8000.m3u8 -vcodec copy -acodec copy $path2/0.mp4"
+            cmdRun(cmd)
         }
 
         open.setOnClickListener {
-            OpenFileUtil.instance?.openFile(this, File(path2))
+            OpenFileUtil.instance?.openFile(this, File("$path2/0.mp4"))
         }
     }
 

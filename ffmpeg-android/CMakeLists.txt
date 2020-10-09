@@ -43,13 +43,6 @@ set_target_properties(avcodec
         PROPERTIES IMPORTED_LOCATION
         ${LIBS_DIR}/libavcodec.so)
 
-#add_library(avdevice
-#        SHARED
-#        IMPORTED)
-#set_target_properties(avdevice
-#        PROPERTIES IMPORTED_LOCATION
-#        ${LIBS_DIR}/libavdevice.so)
-
 add_library(avfilter
         SHARED
         IMPORTED)
@@ -77,13 +70,6 @@ add_library(postproc
 set_target_properties(postproc
         PROPERTIES IMPORTED_LOCATION
         ${LIBS_DIR}/libpostproc.so)
-
-#add_library(swresample
-#        SHARED
-#        IMPORTED)
-#set_target_properties(swresample
-#        PROPERTIES IMPORTED_LOCATION
-#        ${LIBS_DIR}/libswresample.so)
 
 add_library(swscale
         SHARED
