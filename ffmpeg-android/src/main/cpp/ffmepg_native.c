@@ -19,7 +19,7 @@ void callJavaMethod(JNIEnv *env, jclass clazz, int ret) {
         LOGE("---------------clazz isNULL---------------");
         return;
     }
-    //获取方法ID (I)V指的是方法签名 通过javap -s -public FFmpegCmd 命令生成
+    //获取方法ID (I)V指的是方法签名 通过javap -s -public FFmpegJni 命令生成
     jmethodID methodID = (*env)->GetStaticMethodID(env, clazz, "onExecuted", "(I)V");
     if (methodID == NULL) {
         LOGE("---------------methodID isNULL---------------");
@@ -34,7 +34,7 @@ void callJavaMethodProgress(JNIEnv *env, jclass clazz, float ret) {
         LOGE("---------------clazz isNULL---------------");
         return;
     }
-    //获取方法ID (I)V指的是方法签名 通过javap -s -public FFmpegCmd 命令生成
+    //获取方法ID (I)V指的是方法签名 通过javap -s -public FFmpegJni 命令生成
     jmethodID methodID = (*env)->GetStaticMethodID(env, clazz, "onProgress", "(F)V");
     if (methodID == NULL) {
         LOGE("---------------methodID isNULL---------------");
@@ -65,8 +65,8 @@ void ffmpeg_progress(float progress) {
 }
 
 JNIEXPORT jint JNICALL
-Java_com_apkmatrix_components_ffmpeg_1android_jni_FFmpegCmd_run(JNIEnv *env, jclass clazz, jint cmdnum,
-                                              jobjectArray cmdline) {
+Java_com_apkmatrix_components_ffmpeg_1android_jni_FFmpegJni_run(JNIEnv *env, jclass clazz, jint cmdnum,
+                                                                jobjectArray cmdline) {
     (*env)->GetJavaVM(env, &jvm);
     m_clazz = (*env)->NewGlobalRef(env, clazz);
     //---------------------------------C语言 反射Java 相关----------------------------------------
@@ -97,6 +97,6 @@ Java_com_apkmatrix_components_ffmpeg_1android_jni_FFmpegCmd_run(JNIEnv *env, jcl
 }
 
 JNIEXPORT void JNICALL
-Java_com_apkmatrix_components_ffmpeg_1android_jni_FFmpegCmd_exit(JNIEnv *env, jclass type) {
+Java_com_apkmatrix_components_ffmpeg_1android_jni_FFmpegJni_exit(JNIEnv *env, jclass type) {
 
 }

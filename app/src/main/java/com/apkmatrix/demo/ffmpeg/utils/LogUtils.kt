@@ -2,7 +2,7 @@ package com.apkmatrix.demo.ffmpeg.utils
 
 import android.util.Log
 
-internal object LogUtils {
+object LogUtils {
     var isDebug: Boolean = true
     private const val TAG: String = "FFMPEG_DEMO_LOG"
 
