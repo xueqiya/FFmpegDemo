@@ -4922,7 +4922,22 @@ int run(int argc, char **argv) {
         exit_program(69);
 
     exit_program(received_nb_signals ? 255 : main_return_code);
-    ffmpeg_cleanup(0);
+    ffmpeg_exited = 1;
+    nb_filtergraphs = 0;
+    progress_avio = NULL;
+    input_streams = NULL;
+    nb_input_streams = 0;
+    input_files = NULL;
+    nb_input_files = 0;
+    output_streams = NULL;
+    nb_output_streams = 0;
+    output_files = NULL;
+    nb_output_files = 0;
+    run_as_daemon = 0;
+    nb_frames_dup = 0;
+    dup_warning = 1000;
+    nb_frames_drop = 0;
+    want_sdp = 1;
     return main_return_code;
 }
 

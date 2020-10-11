@@ -65,8 +65,7 @@ void ffmpeg_progress(float progress) {
 }
 
 JNIEXPORT jint JNICALL
-Java_com_apkmatrix_components_ffmpeg_1android_jni_FFmpegJni_run(JNIEnv *env, jclass clazz, jint cmdnum,
-                                                                jobjectArray cmdline) {
+Java_com_apkmatrix_components_ffmpeg_1android_jni_FFmpegJni_run(JNIEnv *env,jclass clazz,jint cmdnum,jobjectArray cmdline) {
     (*env)->GetJavaVM(env, &jvm);
     m_clazz = (*env)->NewGlobalRef(env, clazz);
     //---------------------------------C语言 反射Java 相关----------------------------------------
