@@ -8,19 +8,25 @@ import android.content.ServiceConnection
 import android.os.Build
 import android.os.IBinder
 import android.os.RemoteException
+import android.text.TextUtils
 import com.apkmatrix.components.ffmpeg_android.FFmpegService
 import com.apkmatrix.components.ffmpeg_android.IFFmpegAidlInterface
 import com.apkmatrix.components.ffmpeg_android.IFFmpegListener
 import com.apkmatrix.components.ffmpeg_android.OnFFmpegListener
 import com.apkmatrix.components.ffmpeg_android.utils.ActivityManager
+import com.apkmatrix.components.ffmpeg_android.utils.ProcessUtils
 
 object FFmpegManager {
     lateinit var application: Application
     var onFFmpegListener: OnFFmpegListener? = null
 
     fun init(application: Application) {
-        this.application = application
-        ActivityManager.initial(application)
+        val currentProcess = ProcessUtils.getCurrentProcessName(application)
+        val packageName = application.packageName
+        if (TextUtils.equals(currentProcess, packageName)) {
+            this.application = application
+            ActivityManager.initial(application)
+        }
     }
 
     fun run(context: Context, cmds: String?, onFFmpegListener: OnFFmpegListener?) {
