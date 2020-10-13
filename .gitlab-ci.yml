@@ -1,0 +1,51 @@
+image: apk.302e.com:3000/docker/android:29.0.3
+
+stages:
+  - build
+
+before_script:
+  - date
+  - echo "systemProp.http.proxyHost=192.168.0.18" >> gradle.properties
+  - echo "systemProp.http.proxyPort=10081" >> gradle.properties
+  #- echo "systemProp.http.proxyUser=v2ray" >> gradle.properties
+  - echo "systemProp.http.nonProxyHosts=*.nonproxyrepos.com|localhost" >> gradle.properties
+
+  - echo "systemProp.https.proxyHost=192.168.0.18" >> gradle.properties
+  - echo "systemProp.https.proxyPort=10081" >> gradle.properties
+  #- echo "systemProp.https.proxyUser=v2ray" >> gradle.properties
+  - echo "systemProp.https.nonProxyHosts=*.nonproxyrepos.com|localhost" >> gradle.properties
+  - cat gradle.properties
+
+after_script:
+  - mkdir outputs/
+  - mv ffmepg/build/outputs/aar/*.aar  ./outputs/
+
+build-release:
+  stage: build
+  script:
+    - ./gradlew :ffmepg:uploadArchives
+  only:
+    - /^release\/.*$/
+  artifacts:
+    name: "components_ffmepg_release_${CI_JOB_ID}"
+    paths:
+      - "outputs"
+    expire_in: 3 month
+
+build-snapshot:
+  stage: build
+  script:
+    - echo >> ffmepg/gradle.properties
+    - echo "VERSION_SUFFIX=SNAPSHOT" >> ffmepg/gradle.properties
+    - cat ffmepg/gradle.properties
+    - ./gradlew :ffmepg:uploadArchives
+  rules:
+    - if: $CI_COMMIT_BRANCH == "master"
+    - if: $CI_MERGE_REQUEST_ID
+      when: always
+      allow_failure: true
+  artifacts:
+    name: "components_ffmepg_snapshot_${CI_JOB_ID}"
+    paths:
+      - "outputs"
+    expire_in: 2 weeks
