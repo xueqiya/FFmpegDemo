@@ -1,20 +1,6 @@
 # ffmpeg
 
-[最新版引用地址](http://maven.302e.com:3080/#browse/browse:maven-snapshots:com%2Fapkmatrix%2Fcomponents%2Fffmpeg)
-
-## I. 如何引入
-###### 1. 依赖
-```
-maven { url 'http://maven.302e.com:3080/repository/maven-public/' }
-
-implementation 'com.apkmatrix.components:ffmpeg::{版本号}'
-```
-###### 2. 混淆
-```
-```
-## II. 如何使用
 ###### 1. 初始化
-可在任意位置初始化，VideoDL.isInit()判断是否已初始化
 ```
 FFmpegManager.init(this)
 ```
