@@ -17,19 +17,20 @@ public class FFmpegJni {
     }
 
     public static void onExecuted(int ret) {
-        LogUtils.d("onExecuted:$ret");
         if (onCmdExecListener != null) {
             if (ret == 0) {
+                LogUtils.d("onSuccess" + ret);
                 onCmdExecListener.onProgress(100f);
                 onCmdExecListener.onSuccess();
             } else {
+                LogUtils.d("onFailure" + ret);
                 onCmdExecListener.onFailure();
             }
         }
     }
 
     public static void onProgress(float progress) {
-        LogUtils.d("onProgress:$progress");
+        LogUtils.d("onProgress:" + progress);
         if (onCmdExecListener != null) {
             onCmdExecListener.onProgress(progress);
         }

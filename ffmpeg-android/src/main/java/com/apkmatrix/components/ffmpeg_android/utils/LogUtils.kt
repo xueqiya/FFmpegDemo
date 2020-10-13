@@ -4,7 +4,7 @@ import android.util.Log
 
 internal object LogUtils {
     var isDebug: Boolean = true
-    private const val TAG: String = "FFMPEG_DEMO_LOG"
+    private const val TAG: String = "FFMPEG_COMPONENTS_LOG"
 
     @JvmStatic
     fun d(msg: String) {
