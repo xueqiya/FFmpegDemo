@@ -3,7 +3,7 @@ package com.apkmatrix.demo.ffmpeg
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.apkmatrix.components.ffmpeg.OnFFmpegListener
-import com.apkmatrix.components.ffmpeg.jni.FFmpegManager
+import com.apkmatrix.components.ffmpeg.FFmpegManager
 import com.apkmatrix.demo.ffmpeg.utils.FileUtils
 import com.apkmatrix.demo.ffmpeg.utils.LogUtils
 import com.apkmatrix.demo.ffmpeg.utils.OpenFileUtil

@@ -1,4 +1,4 @@
-package com.apkmatrix.components.ffmpeg.jni
+package com.apkmatrix.components.ffmpeg
 
 import android.app.Application
 import android.content.ComponentName
@@ -9,10 +9,6 @@ import android.os.Build
 import android.os.IBinder
 import android.os.RemoteException
 import android.text.TextUtils
-import com.apkmatrix.components.ffmpeg.FFmpegService
-import com.apkmatrix.components.ffmpeg.IFFmpegAidlInterface
-import com.apkmatrix.components.ffmpeg.IFFmpegListener
-import com.apkmatrix.components.ffmpeg.OnFFmpegListener
 import com.apkmatrix.components.ffmpeg.utils.ActivityManager
 import com.apkmatrix.components.ffmpeg.utils.LogUtils
 import com.apkmatrix.components.ffmpeg.utils.ProcessUtils
@@ -25,13 +21,13 @@ object FFmpegManager {
         val currentProcess = ProcessUtils.getCurrentProcessName(application)
         val packageName = application.packageName
         if (TextUtils.equals(currentProcess, packageName)) {
-            this.application = application
+            FFmpegManager.application = application
             ActivityManager.initial(application)
         }
     }
 
     fun run(cmds: String?, onFFmpegListener: OnFFmpegListener?) {
-        this.onFFmpegListener = onFFmpegListener
+        FFmpegManager.onFFmpegListener = onFFmpegListener
         val intent = Intent(application, FFmpegService::class.java)
         intent.putExtra(FFmpegService.EXTRA_PARAM_CMD, cmds)
         if (ActivityManager.instance.isBackground && Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {

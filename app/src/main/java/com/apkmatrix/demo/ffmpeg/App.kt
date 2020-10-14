@@ -1,7 +1,7 @@
 package com.apkmatrix.demo.ffmpeg
 
 import android.app.Application
-import com.apkmatrix.components.ffmpeg.jni.FFmpegManager
+import com.apkmatrix.components.ffmpeg.FFmpegManager
 
 class App: Application() {
     override fun onCreate() {
