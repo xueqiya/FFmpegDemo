@@ -46,6 +46,10 @@ class MainActivity : AppCompatActivity() {
             })
         }
 
+        cancel.setOnClickListener {
+            FFmpegManager.cancel()
+        }
+
         open.setOnClickListener {
             OpenFileUtil.instance?.openFile(this, File("$path2/0.mp4"))
         }

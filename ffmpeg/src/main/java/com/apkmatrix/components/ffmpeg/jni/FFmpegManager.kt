@@ -14,6 +14,7 @@ import com.apkmatrix.components.ffmpeg.IFFmpegAidlInterface
 import com.apkmatrix.components.ffmpeg.IFFmpegListener
 import com.apkmatrix.components.ffmpeg.OnFFmpegListener
 import com.apkmatrix.components.ffmpeg.utils.ActivityManager
+import com.apkmatrix.components.ffmpeg.utils.LogUtils
 import com.apkmatrix.components.ffmpeg.utils.ProcessUtils
 
 object FFmpegManager {
@@ -41,6 +42,10 @@ object FFmpegManager {
         application.bindService(intent, mServiceConnection, Context.BIND_AUTO_CREATE)
     }
 
+    fun cancel() {
+        stopFFmpegService()
+    }
+
     private val mServiceConnection: ServiceConnection = object : ServiceConnection {
         override fun onServiceConnected(p0: ComponentName?, p1: IBinder?) {
             val iFFmpegAidlInterface = IFFmpegAidlInterface.Stub.asInterface(p1)
@@ -57,16 +62,24 @@ object FFmpegManager {
     private val listener: IFFmpegListener = object : IFFmpegListener.Stub() {
         override fun onSuccess() {
             onFFmpegListener?.onSuccess()
-            application.unbindService(mServiceConnection)
+            stopFFmpegService()
         }
 
         override fun onFailure() {
             onFFmpegListener?.onFailure()
-            application.unbindService(mServiceConnection)
+            stopFFmpegService()
         }
 
         override fun onProgress(progress: Float) {
             onFFmpegListener?.onProgress(progress)
+        }
+    }
+
+    private fun stopFFmpegService() {
+        try {
+            application.unbindService(mServiceConnection)
+        } catch (e: Exception) {
+            LogUtils.e("stopFFmpegService:$e")
         }
     }
 }

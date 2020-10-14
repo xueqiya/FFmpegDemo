@@ -84,4 +84,11 @@ class FFmpegService : Service() {
         service.createNotificationChannel(chan)
         return channelId
     }
+
+    override fun onUnbind(intent: Intent?): Boolean {
+        LogUtils.d("FFmpegService:onUnbind")
+        stopForeground(true)
+        android.os.Process.killProcess(android.os.Process.myPid())
+        return super.onUnbind(intent)
+    }
 }

@@ -46,8 +46,6 @@ public class FFmpegJni {
 
     private static native int run(int argc, String[] argv);
 
-    private static native void exit();
-
     static {
         System.loadLibrary("swscale");
         System.loadLibrary("postproc");
