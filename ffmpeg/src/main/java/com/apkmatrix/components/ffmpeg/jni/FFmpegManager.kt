@@ -29,9 +29,9 @@ object FFmpegManager {
         }
     }
 
-    fun run(context: Context, cmds: String?, onFFmpegListener: OnFFmpegListener?) {
+    fun run(cmds: String?, onFFmpegListener: OnFFmpegListener?) {
         this.onFFmpegListener = onFFmpegListener
-        val intent = Intent(context, FFmpegService::class.java)
+        val intent = Intent(application, FFmpegService::class.java)
         intent.putExtra(FFmpegService.EXTRA_PARAM_CMD, cmds)
         if (ActivityManager.instance.isBackground && Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             intent.putExtra(FFmpegService.EXTRA_PARAM_IS_FOREGROUND, true)
