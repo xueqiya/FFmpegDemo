@@ -27,9 +27,9 @@ class MainActivity : AppCompatActivity() {
 
         start.setOnClickListener {
 //            val cmd = "ffmpeg -y -i $path1 -vcodec copy -acodec copy $path2/0.mp4"
-//            val cmd = "ffmpeg -y -i $path1 -vcodec copy -acodec copy $path2/0.mp4"
-            val cmd =
-                "ffmpeg -y -protocol_whitelist file,http,https,tcp,tls,crypto -i https://gamespotvideo.cbsistatic.com/vr/2020/09/11/517330/GSU_DCFandome2020_DoomPatrol_v2_8000.m3u8 -vcodec copy -acodec copy $path2/0.mp4"
+            val cmd = "ffmpeg -y -t 5 -ss 00:00:10 -i $path1 $path2/0.gif"
+//            val cmd =
+//                "ffmpeg -y -protocol_whitelist file,http,https,tcp,tls,crypto -i https://gamespotvideo.cbsistatic.com/vr/2020/09/11/517330/GSU_DCFandome2020_DoomPatrol_v2_8000.m3u8 -vcodec copy -acodec copy $path2/0.mp4"
             FFmpegManager.run(cmd, object : OnFFmpegListener {
                 override fun onSuccess() {
                     LogUtils.d("success")
@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         open.setOnClickListener {
-            OpenFileUtil.instance?.openFile(this, File("$path2/0.mp4"))
+            OpenFileUtil.instance?.openFile(this, File("$path2/0.gif"))
         }
     }
 }

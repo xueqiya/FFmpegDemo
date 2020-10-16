@@ -40,24 +40,13 @@ echo "Compiling FFmpeg for $CPU"
     --enable-openssl \
     --enable-jni \
     --enable-mediacodec \
-    --enable-decoder=h264_mediacodec \
+    --enable-decoders \
+    --enable-encoders \
     --enable-demuxers \
-    --enable-muxer=mp4 \
+    --enable-muxers \
     --enable-protocols \
     --enable-protocol=https \
     \
-    --enable-libfdk_aac \
-    --enable-encoder=libfdk_aac \
-    --enable-decoder=aac_latm \
-    --enable-decoder=aac \
-    --enable-demuxer=aac \
-    --enable-parser=aac \
-    \
-    --enable-libvpx \
-    --enable-decoder=vp8 \
-    --enable-parser=vp8 \
-    --enable-decoder=vp9 \
-    --enable-parser=vp9 \
     --cross-prefix=$CROSS_PREFIX \
     --target-os=android \
     --arch=$ARCH \
@@ -68,26 +57,27 @@ echo "Compiling FFmpeg for $CPU"
     --strip=$STRIP \
     --sysroot=$SYSROOT
 
+make clean
 make -j8
 make install
 echo "The Compilation of FFmpeg for $CPU is completed"
 }
 
 #armv7-a
-#API=16
-#ARCH=arm
-#CPU=armv7-a
-#CC=$TOOLCHAIN/bin/armv7a-linux-androideabi$API-clang
-#CXX=$TOOLCHAIN/bin/armv7a-linux-androideabi$API-clang++
-#NM=$TOOLCHAIN/bin/arm-linux-androideabi-nm
-#STRIP=$TOOLCHAIN/bin/arm-linux-androideabi-strip
-#SYSROOT=$NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot
-#CROSS_PREFIX=$TOOLCHAIN/bin/arm-linux-androideabi-
-#PREFIX=$(pwd)/android/$CPU
-#OPTIMIZE_CFLAGS="-mfloat-abi=softfp -mfpu=vfp -marm -march=$CPU "
-#build_android
+API=16
+ARCH=arm
+CPU=armv7-a
+CC=$TOOLCHAIN/bin/armv7a-linux-androideabi$API-clang
+CXX=$TOOLCHAIN/bin/armv7a-linux-androideabi$API-clang++
+NM=$TOOLCHAIN/bin/arm-linux-androideabi-nm
+STRIP=$TOOLCHAIN/bin/arm-linux-androideabi-strip
+SYSROOT=$NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot
+CROSS_PREFIX=$TOOLCHAIN/bin/arm-linux-androideabi-
+PREFIX=$(pwd)/android/ffmpeg_full/$CPU
+OPTIMIZE_CFLAGS=" -mfpu=vfp -marm -march=$CPU "
+build_android
 
-armv8-a
+#armv8-
 API=21
 ARCH=arm64
 CPU=armv8-a
@@ -97,6 +87,6 @@ NM=$TOOLCHAIN/bin/aarch64-linux-android-nm
 STRIP=$TOOLCHAIN/bin/aarch64-linux-android-strip
 SYSROOT=$NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot
 CROSS_PREFIX=$TOOLCHAIN/bin/aarch64-linux-androideabi-
-PREFIX=$(pwd)/android/$CPU
-OPTIMIZE_CFLAGS="-mfloat-abi=softfp -mfpu=vfp -marm -march=$CPU "
+PREFIX=$(pwd)/android/ffmpeg_full/$CPU
+OPTIMIZE_CFLAGS="-march=$CPU "
 build_android

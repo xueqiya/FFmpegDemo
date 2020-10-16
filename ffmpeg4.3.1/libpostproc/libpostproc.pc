@@ -1,7 +1,7 @@
-prefix=/Users/xueqi/Projects/my/FFmpegDemo/ffmpeg4.3.1/android/armv8-a
+prefix=/Users/xueqi/Projects/my/FFmpegDemo/ffmpeg4.3.1/android/ffmpeg_full/armv8-a
 exec_prefix=${prefix}
-libdir=/Users/xueqi/Projects/my/FFmpegDemo/ffmpeg4.3.1/android/armv8-a/lib
-includedir=/Users/xueqi/Projects/my/FFmpegDemo/ffmpeg4.3.1/android/armv8-a/include
+libdir=/Users/xueqi/Projects/my/FFmpegDemo/ffmpeg4.3.1/android/ffmpeg_full/armv8-a/lib
+includedir=/Users/xueqi/Projects/my/FFmpegDemo/ffmpeg4.3.1/android/ffmpeg_full/armv8-a/include
 
 Name: libpostproc
 Description: FFmpeg postprocessing library

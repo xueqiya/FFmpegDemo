@@ -4,7 +4,7 @@ ext {
     package_type = 'aar'  // 输出类型
     package_group = 'com.apkmatrix.components' // JCenter的GroupId
     package_artifact = 'ffmpeg' // JCenter的ArtifactId
-    package_version = '1.0.0'  // JCenter的VersionId
+    package_version = '1.0.1'  // JCenter的VersionId
     package_description = 'A FFmpeg library of Android'
 
     siteUrl = 'https://github.com/xueqiya/FFmpegDemo'
