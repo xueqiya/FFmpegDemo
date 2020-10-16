@@ -82,10 +82,25 @@ echo "Compiling FFmpeg for $CPU"
     --strip=$STRIP \
     --sysroot=$SYSROOT
 
+make clean
 make -j8
 make install
 echo "The Compilation of FFmpeg for $CPU is completed"
 }
+
+#armv8-a
+API=21
+ARCH=arm64
+CPU=armv8-a
+CC=$TOOLCHAIN/bin/aarch64-linux-android$API-clang
+CXX=$TOOLCHAIN/bin/aarch64-linux-android$API-clang++
+NM=$TOOLCHAIN/bin/aarch64-linux-android-nm
+STRIP=$TOOLCHAIN/bin/aarch64-linux-android-strip
+SYSROOT=$NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot
+CROSS_PREFIX=$TOOLCHAIN/bin/aarch64-linux-androideabi-
+PREFIX=$(pwd)/android/$CPU
+OPTIMIZE_CFLAGS="-march=$CPU "
+build_android
 
 #armv7-a
 API=16
@@ -98,19 +113,5 @@ STRIP=$TOOLCHAIN/bin/arm-linux-androideabi-strip
 SYSROOT=$NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot
 CROSS_PREFIX=$TOOLCHAIN/bin/arm-linux-androideabi-
 PREFIX=$(pwd)/android/$CPU
-OPTIMIZE_CFLAGS="-mfloat-abi=softfp -mfpu=vfp -marm -march=$CPU "
+OPTIMIZE_CFLAGS=" -mfpu=vfp -marm -march=$CPU "
 build_android
-
-#armv8-a
-#API=21
-#ARCH=arm64
-#CPU=armv8-a
-#CC=$TOOLCHAIN/bin/aarch64-linux-android$API-clang
-#CXX=$TOOLCHAIN/bin/aarch64-linux-android$API-clang++
-#NM=$TOOLCHAIN/bin/aarch64-linux-android-nm
-#STRIP=$TOOLCHAIN/bin/aarch64-linux-android-strip
-#SYSROOT=$NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot
-#CROSS_PREFIX=$TOOLCHAIN/bin/aarch64-linux-androideabi-
-#PREFIX=$(pwd)/android/$CPU
-#OPTIMIZE_CFLAGS="-mfloat-abi=softfp -mfpu=vfp -marm -march=$CPU "
-#build_android

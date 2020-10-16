@@ -13,10 +13,12 @@ if (${ANDROID_ABI} STREQUAL "armeabi-v7a")
     set(OPENSSL_DIR ${CMAKE_SOURCE_DIR}/../ffmpeg4.3.1/openssl/android/armv7-a)
 endif (${ANDROID_ABI} STREQUAL "armeabi-v7a")
 
-## arm64-v8a
-#if(${ANDROID_ABI} STREQUAL "arm64-v8a")
-#    set(LIBS_DIR ${CMAKE_SOURCE_DIR}/src/main/jniLibs/arm64-v8a)
-#endif(${ANDROID_ABI} STREQUAL "arm64-v8a")
+# arm64-v8a
+if(${ANDROID_ABI} STREQUAL "arm64-v8a")
+    set(LIBS_DIR ${CMAKE_SOURCE_DIR}/src/main/jniLibs/arm64-v8a)
+    set(FDK_AAC_DIR ${CMAKE_SOURCE_DIR}/../ffmpeg4.3.1/fdk-aac/android/armv8-a)
+    set(OPENSSL_DIR ${CMAKE_SOURCE_DIR}/../ffmpeg4.3.1/openssl/android/armv8-a)
+endif(${ANDROID_ABI} STREQUAL "arm64-v8a")
 
 include_directories(${CMAKE_SOURCE_DIR}/src/main/cpp)
 include_directories(${CMAKE_SOURCE_DIR}/src/main/cpp/ffmpeg)

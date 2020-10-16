@@ -9,7 +9,7 @@ function build_android
     ./Configure  \
     -D__ANDROID_API__=$API \
     --prefix=$PREFIX \
-    android-arm \
+    $COMPILER \
     no-ssl2 \
     no-comp \
     no-asm \
@@ -28,6 +28,7 @@ export ANDROID_NDK_HOME=$NDK
 export SYSROOT=$NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot
 export API=16
 export CPU=armv7-a
+export COMPILER=android-arm
 export PREFIX=$(pwd)/android/$CPU
 export PATH=$TOOLCHAIN/bin:$PATH
 export CC=$TOOLCHAIN/bin/armv7a-linux-androideabi$API-clang
@@ -43,6 +44,7 @@ export ANDROID_NDK_HOME=$NDK
 export SYSROOT=$NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot
 export API=21
 export CPU=armv8-a
+export COMPILER=android-arm64
 export PREFIX=$(pwd)/android/$CPU
 export PATH=$TOOLCHAIN/bin:$PATH
 export CC=$TOOLCHAIN/bin/aarch64-linux-android$API-clang

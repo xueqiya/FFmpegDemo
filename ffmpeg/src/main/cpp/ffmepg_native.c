@@ -50,7 +50,7 @@ void callJavaMethodProgress(JNIEnv *env, jclass clazz, float ret) {
 static void ffmpeg_callback(int ret) {
     JNIEnv *env;
     //附加到当前线程从JVM中取出JNIEnv, C/C++从子线程中直接回到Java里的方法时  必须经过这个步骤
-    (*jvm)->AttachCurrentThread(jvm, (void **) &env, NULL);
+    (*jvm)->AttachCurrentThread(jvm, (JNIEnv **) (void **) &env, NULL);
     callJavaMethod(env, m_clazz, ret);
 
     //完毕-脱离当前线程
@@ -59,7 +59,7 @@ static void ffmpeg_callback(int ret) {
 
 void ffmpeg_progress(float progress) {
     JNIEnv *env;
-    (*jvm)->AttachCurrentThread(jvm, (void **) &env, NULL);
+    (*jvm)->AttachCurrentThread(jvm, (JNIEnv **) (void **) &env, NULL);
     callJavaMethodProgress(env, m_clazz, progress);
     (*jvm)->DetachCurrentThread(jvm);
 }

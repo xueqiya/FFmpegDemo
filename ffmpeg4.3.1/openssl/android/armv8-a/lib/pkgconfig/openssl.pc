@@ -1,4 +1,4 @@
-prefix=/Users/xueqi/Projects/FFmpegDemo/ffmpeg/openssl/android/armv8-a
+prefix=/Users/xueqi/Projects/my/FFmpegDemo/ffmpeg4.3.1/openssl/android/armv8-a
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include
