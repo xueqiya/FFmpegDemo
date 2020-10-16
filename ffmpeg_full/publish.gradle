@@ -1,0 +1,24 @@
+ext {
+    package_userOrg = 'xueqiya' //  组织名或者用户名 不填默认用户名
+    package_repo = 'maven' // bintray上的仓库名，就是我们在第二步中创建的仓库名字，如果package_userOrg设置的为组织名，那么这个仓库名得属于组织的
+    package_type = 'aar'  // 输出类型
+    package_group = 'com.apkmatrix.components' // JCenter的GroupId
+    package_artifact = 'ffmpeg_full' // JCenter的ArtifactId
+    package_version = '1.0.0'  // JCenter的VersionId
+    package_description = 'A FFmpeg library of Android'
+
+    siteUrl = 'https://github.com/xueqiya/FFmpegDemo'
+    gitUrl = 'https://github.com/xueqiya/FFmpegDemo'
+
+    //开发者信息
+    developerId = 'xueqiya'
+    developerName = 'xueqiya'
+    developerEmail = 'jiaowxueqiya@gmail.com'
+
+    //开源协议
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = 'Apache-2.0'
+}
+
+apply from: '../bintray.gradle'

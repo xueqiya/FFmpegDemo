@@ -8,17 +8,17 @@ set(CPP_DIR ${CMAKE_SOURCE_DIR}/src/main/cpp)
 
 # armeabi-v7a
 if (${ANDROID_ABI} STREQUAL "armeabi-v7a")
-    set(LIBS_DIR ${CMAKE_SOURCE_DIR}/src/main/jniLibs/armeabi-v7a)
+    set(FFMPEG_DIR ${CMAKE_SOURCE_DIR}/../ffmpeg4.3.1/android/ffmpeg/armv7-a)
     set(FDK_AAC_DIR ${CMAKE_SOURCE_DIR}/../ffmpeg4.3.1/fdk-aac/android/armv7-a)
     set(OPENSSL_DIR ${CMAKE_SOURCE_DIR}/../ffmpeg4.3.1/openssl/android/armv7-a)
 endif (${ANDROID_ABI} STREQUAL "armeabi-v7a")
 
 # arm64-v8a
-if(${ANDROID_ABI} STREQUAL "arm64-v8a")
-    set(LIBS_DIR ${CMAKE_SOURCE_DIR}/src/main/jniLibs/arm64-v8a)
+if (${ANDROID_ABI} STREQUAL "arm64-v8a")
+    set(FFMPEG_DIR ${CMAKE_SOURCE_DIR}/../ffmpeg4.3.1/android/ffmpeg/armv8-a)
     set(FDK_AAC_DIR ${CMAKE_SOURCE_DIR}/../ffmpeg4.3.1/fdk-aac/android/armv8-a)
     set(OPENSSL_DIR ${CMAKE_SOURCE_DIR}/../ffmpeg4.3.1/openssl/android/armv8-a)
-endif(${ANDROID_ABI} STREQUAL "arm64-v8a")
+endif (${ANDROID_ABI} STREQUAL "arm64-v8a")
 
 include_directories(${CMAKE_SOURCE_DIR}/src/main/cpp)
 include_directories(${CMAKE_SOURCE_DIR}/src/main/cpp/ffmpeg)
@@ -43,42 +43,42 @@ add_library(avcodec
         IMPORTED)
 set_target_properties(avcodec
         PROPERTIES IMPORTED_LOCATION
-        ${LIBS_DIR}/libavcodec.so)
+        ${FFMPEG_DIR}/lib/libavcodec.so)
 
 add_library(avfilter
         SHARED
         IMPORTED)
 set_target_properties(avfilter
         PROPERTIES IMPORTED_LOCATION
-        ${LIBS_DIR}/libavfilter.so)
+        ${FFMPEG_DIR}/lib/libavfilter.so)
 
 add_library(avformat
         SHARED
         IMPORTED)
 set_target_properties(avformat
         PROPERTIES IMPORTED_LOCATION
-        ${LIBS_DIR}/libavformat.so)
+        ${FFMPEG_DIR}/lib/libavformat.so)
 
 add_library(avutil
         SHARED
         IMPORTED)
 set_target_properties(avutil
         PROPERTIES IMPORTED_LOCATION
-        ${LIBS_DIR}/libavutil.so)
+        ${FFMPEG_DIR}/lib/libavutil.so)
 
 add_library(postproc
         SHARED
         IMPORTED)
 set_target_properties(postproc
         PROPERTIES IMPORTED_LOCATION
-        ${LIBS_DIR}/libpostproc.so)
+        ${FFMPEG_DIR}/lib/libpostproc.so)
 
 add_library(swscale
         SHARED
         IMPORTED)
 set_target_properties(swscale
         PROPERTIES IMPORTED_LOCATION
-        ${LIBS_DIR}/libswscale.so)
+        ${FFMPEG_DIR}/lib/libswscale.so)
 
 add_library(fdk-aac
         SHARED
